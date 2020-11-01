@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site copie</title>
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @media(max-width :700px)
+{
+    #time{
+        font-size: 6rem;
+        font-size: 8rem;
+}
+    
+}
+      body{ margin: 0px;  padding: 0px;}
+     .button1{
+         border-color: mediumorchid;
+         border-radius: 50%;
+         background-color: orchid;
+         text-align: center;
+        font-size: large;
+        padding: 30px;
+        font-weight: bold;
+     }
+     #th2{ max-width: 90%; }
+     
+     .button2{
+         font-weight: bold;
+         border-color: mediumorchid;
+         border-radius: 50%;
+         background-color: rgb(226, 180, 224);
+         text-align: center;
+         font-size: large;
+         padding: 30px;}
+     a  { text-decoration: none; }
+     td{  padding: 10px; }
+  
+     td :active{ color: papayawhip; }
+     #menu :hover{ color: black;}
+    #div1{  background-color: orchid; border-radius: 20%;}
+    h2{  font-size: 40px;}
+    /*  */
+
+   
+    </style>
+</head>
+<div id="menu"  style="float: left;height: 100%; width: 37px;padding: 5px; font-size: 22px; " >
+    <a href="#" style="color: black;"><i class="fa fa-list" aria-hidden="true" ></i></a></div>
+<body>
+    <div id="div1">
+ <table>
+<tr> <td ><h2><img src="icons8-virus-80.png" alt=""> COVID-19</h2></td>
+               <td ><h4><a href="#"style="color: black;">PARCOUR </a></h4></td>
+               <td ><h3><a href="#"style="color: black;">Cours   </a></h3></td> 
+               <td style="padding-right: 290px;" ><h4><a href="#"style="color: black;">Busness </a></h4></td>
+
+      <td ><input type="button" class="button1" value="   S'inscrire    "></td> 
+      <td ><input type="button" class="button2" value="Se Connecter"></td>
+</tr>
+ </table>
+</div>
+<nav style="float: left;">
+<img src="Malware.png" alt="" style="width: 200px;"><br><br><br>
+<img src="wuhan.png" alt=""style="width: 200px;">
+</nav>
+<div style="float: right;">
+    <img src="Malware1.png" alt="" style="width: 300px;"><br>
+    <img src="virus1.jpg" alt="" style="width: 300px;">
+</div>
+<table style="padding: 50px;">
+<th><b><h3>Covid-19 : 372 nouveau cas confirmés au Maroc ,  11.279 au total 
+  &nbsp;&nbsp;    <h2><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+     <time id="time">31/05/2019  10:17:00</time></h2> </h3></th></b>
+
+<tr><td style="font-size:29px;"><h5> nouveau cas D'infection au nouveau coronavirus ont été cnfirmés au maroc , 
+    portant A 11.279 le nombre total des cas de contamination jusqu'a 7h00  
+    , annonce le ministére de la santé  sur le portail <a href="#">"www.coronavirus.ma"</a>
+</td></tr></h5>
+<tr><th><hr><h3> LES INFOS SUR CORONAVIRUS (COVID-19)
+</h3></th></tr>
+<tr><td><h4> maladie à coronavirus 2019 (COVID-19) est une maladie infectieuse provoquée par un nouveau virus qui
+     n'avait encore jamais été identifié chez l'être humain.
+    Ce virus provoque une maladie respiratoire (analogue à la grippe) avec des symptômes comme la toux,
+    la fièvre et, dans les cas les plus sévères, une pneumonie.
+     On peut s'en protéger en se lavant fréquemment les mains, et en évitant de se toucher le visage</h4></td></tr>
+
+
+     <tr><th>COMMENT LA MALADIE SE PROPAGE <th></tr>
+      <tr> <td> <h4>Le nouveau coronavirus 2019 se propage essentiellement par contact avec une personne infectée, 
+        lorsqu'elle tousse ou éternue, ou par l'intermédiaire des gouttelettes de salive ou de sécrétions nasales.</h4></td></tr>
+</table>
+
+
+
+<footer style="background-color: rgb(25, 27, 65);padding: 40px;">
+    <!-- <a href="#" style="color: blanchedalmond;"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> -->
+    <img src="Malware.png" alt="" style="width: 100px;">
+
+    &copy;asmae salhi
+</footer>
+
+<script>
+  
+//dom element
+const time = document.getElementById('time');
+
+//show time
+function showtime(){
+    let today = new Date(),
+  
+    day  =today.getDate(),
+    year =today.getFullYear(), 
+    hour =today.getHours(),
+    min  =today.getMinutes(),
+    sec  =today.getSeconds(),
+    month=today.getMonth()+1;
+// const amPm= hour >= 12 ? 'PM' : 'AM';
+if(hour >= 12){
+    const ampm = 'PM';
+}else{
+    ampm='AM' ;
+}
+//12hr fomat
+hour = hour % 24 || 24 ;
+//output time
+
+time.innerHTML = `${addzero(day)}<span>/</span>${addzero(month)}<span>/</span>${year}   ${hour}<span>:</span>${addzero (min)}<span>:</span>${addzero (sec)}`;
+
+setTimeout(showtime ,1000);
+
+}
+
+//add zero
+function addzero(n){
+    return(parseInt(n,10)<10 ? '0' : '') + n ;
+}
+//run
+showtime();
+
+</script>
+
+
+</body>
+</html>
